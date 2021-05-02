@@ -13,6 +13,6 @@ resource "aws_instance" "linux-instance" {
   }
 
   depends_on = [
-    aws_db_instance.exam_rds,
+    aws_db_instance.exam_vpc,
   ]
 }
