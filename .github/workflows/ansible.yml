@@ -43,6 +43,6 @@ jobs:
         with:
           playbookName: 'ansible/deploy.yml'
           inventoryFile: 'ansible/hosts'
-          keyFile: 'ansible/key.pem'
+          keyFile: 'ansible/slux.pem'
 
       
