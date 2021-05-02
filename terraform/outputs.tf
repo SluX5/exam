@@ -1,6 +1,6 @@
 output "rds_endpoint" {
   description = "The address of the RDS instance"
-  value       = aws_db_instance.exam_vpc.endpoint
+  value       = aws_db_instance.exam_db.endpoint
 }
 
 output "ec2_endpoint" {
