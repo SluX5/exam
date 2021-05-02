@@ -7,32 +7,32 @@
    - name: "Update"
      command: apt -y update
    - name: "Upgrade"
-      command: apt -y upgrade
+     command: apt -y upgrade
    - name: "Install Python"
-      command: apt -y install python3-pip   
+     command: apt -y install python3-pip   
    - name: "Install Docker"
-      command: pip3 install docker-py
+     command: pip3 install docker-py
    - name: "Update"
-      command: apt -y update
+     command: apt -y update
    - name: "Install" 
-      command: apt -y install apt-transport-https
+     command: apt -y install apt-transport-https
    - name: ca-certificates 
-      command: apt -y install ca-certificates 
+     command: apt -y install ca-certificates 
    - name: Curl
-      command: apt -y install curl 
+     command: apt -y install curl 
    - name: gnupg 
-      command: apt -y install gnupg 
+     command: apt -y install gnupg 
    - name: lsb-release
-      command: apt -y install lsb-release
+     command: apt -y install lsb-release
    - name: Key
-      apt_key: url=https://download.docker.com/linux/ubuntu/gpg
+     apt_key: url=https://download.docker.com/linux/ubuntu/gpg
    - name: Add Docker APT repository
-      apt_repository:
-        repo: deb [arch=amd64] https://download.docker.com/{{ ansible_system | lower }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+     apt_repository:
+       repo: deb [arch=amd64] https://download.docker.com/{{ ansible_system | lower }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
    - name: Install Docker
-      command: apt-get -y install docker-ce docker-ce-cli containerd.io
+     command: apt-get -y install docker-ce docker-ce-cli containerd.io
    - name: Install docker-compose
-      pip:
+     pip:
         name: docker-compose
    - name: Start Docker service
      service:
