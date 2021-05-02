@@ -24,11 +24,14 @@
      command: apt -y install gnupg 
    - name: lsb-release
      command: apt -y install lsb-release
-   - name: Key
-     apt_key: url=https://download.docker.com/linux/ubuntu/gpg
-   - name: Add Docker APT repository
-     apt_repository:
-       repo: deb [arch=amd64] https://download.docker.com/{{ ansible_system | lower }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+   - name: Add Docker GPG apt Key
+     apt_key:
+       url: https://download.docker.com/linux/ubuntu/gpg
+       state: present
+   - name: Add Docker Repository
+      apt_repository:
+       repo: deb https://download.docker.com/linux/ubuntu bionic stable
+       state: present
    - name: Install Docker
      command: apt-get -y install docker-ce docker-ce-cli containerd.io
    - name: Install docker-compose
