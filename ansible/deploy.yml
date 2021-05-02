@@ -6,8 +6,12 @@
   tasks:
    - name: "Update"
      command: apt -y update
+   - name: "Upgrade"
+      command: apt -y upgrade
+   - name: "Install Python"
+      command: apt -y install python3-pip   
    - name: "Install Docker"
-      command: pip install docker-py
+      command: pip3 install docker-py
    - name: "Update"
       command: apt -y update
    - name: "Install" 
