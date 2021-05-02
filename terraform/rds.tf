@@ -1,4 +1,4 @@
-resource "aws_db_instance" "exam_vpc" {
+resource "aws_db_instance" "exam_db" {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "mysql"
