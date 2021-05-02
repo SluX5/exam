@@ -38,11 +38,7 @@
      pip:
         name: docker-compose
    - name: Start Docker service
-     service:
-       name: docker
-       state: started
-       enabled: yes
-       become: yes
+     command: systemctl start docker
 
    - name: Add user ec2-user to docker group
      user:
