@@ -1,13 +1,14 @@
 name: 'MySQL'
 
 on:
-  workflow_run:
-    workflows:
-      - Ansible
-    types: 
-      - completed
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'MySQL Import dump'  
     
 jobs:
   mysql:
