@@ -13,7 +13,7 @@ CREATE TABLE `exam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `exam` (`id`, `firstname`, `lastname`, `email`, `reg_date`) VALUES
-(1, 'admin', 'exam', 'spektr98@gmail.com', '2021-05-02 13:00:00');
+(1, 'exam', 'exam', 'spektr98@gmail.com', '2021-05-02 13:00:00');
 
 ALTER TABLE `exam`
   ADD PRIMARY KEY (`id`);
